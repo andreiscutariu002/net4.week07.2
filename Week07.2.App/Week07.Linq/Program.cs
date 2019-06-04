@@ -13,7 +13,6 @@
             var allPosts = ReadPosts("posts.json");
 
             // 1 - find all users having email ending with ".net".
-            var users1 = allUsers.Where(x => x.Email.EndsWith(".net")).ToList();
 
             // 2 - find all posts for users having email ending with ".net".
 
@@ -34,6 +33,10 @@
             // 10 - create a new class: public class UserPosts { public User User {get; set}; public List<Post> Posts {get; set} }
             //    - create a new list: List<UserPosts>
             //    - insert in this list each user with his posts only
+
+            // 11 - order users by zip code
+            
+            // 12 - order users by number of posts
         }
 
         private static List<Post> ReadPosts(string file)
