@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week07.2.App", "Week07.2.Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week07.3", "Week07.3\Week07.3.csproj", "{00F03274-E7B5-4AA0-A9AA-EFF26DA22AA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week07.Linq", "Week07.Students\Week07.Linq.csproj", "{F6C9B286-1083-483A-8C10-98DFD28056B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week07.Linq", "Week07.Linq\Week07.Linq.csproj", "{F6C9B286-1083-483A-8C10-98DFD28056B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
