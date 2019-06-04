@@ -1,50 +1,50 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Week07._2.App
+﻿namespace Week07._2.App
 {
-    public class Student
+    internal class Program
     {
-        public void AddCourse(int courseId)
+        private static void Main(string[] args)
         {
-        }
-    }
+            //DateTime date = DateTime.UtcNow;
 
-    class Program
-    {
-        static void Main(string[] args)
-        {
+            //var newDate = date.AddDays(10);
+
             //var s = new Student();
 
-            //s.AddCourse(1);
+            //s.AddCourse(10);
 
-            int i = 10;
+            //s.SomeMethod(32);
 
-            //bool result = i.IsGreaterThan(100);
+            ////s.SomeMethod(20);
 
-            bool result = IsGreaterThan(10, 4);
+            //int i = 10;
 
-            bool result2 = 10.IsGreaterThan(4);
+            ////bool result = i.IsGreaterThan(100);
 
-            bool result3 = 10.IsGreaterThan(4);
+            //bool result = IsGreaterThan(10, 4);
+
+            //bool result2 = 10.IsGreaterThan(4);
+
+            //bool result3 = 10.IsGreaterThan(4);
+
+            //bool isNegative = (-1).IsNegative();
+
+            //bool isNegative2 = 10.IsNegative();
+
+            decimal d1 = 10;
+            decimal d2 = 10;
+            decimal d3 = 10;
+            decimal d4 = 10;
+
+            var a = d1.Aduna(d2);
+
+            var b = d2.Scade(d3);
+
+            var c = d3.Inmulteste(d4);
         }
 
         public static bool IsGreaterThan(int a, int b)
         {
             return a > b;
-        }
-    }
-
-    public static class IntExtensions
-    {
-        // first param - extension type
-        // 
-        public static bool IsGreaterThan(this int @this, int value)
-        {
-            return @this > value;
         }
     }
 }
