@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Dynamic;
 
 namespace Week07.Linq
 {
@@ -82,11 +83,28 @@ namespace Week07.Linq
             //    - create a new list: List<UserPosts>
             //    - insert in this list each user with his posts only
 
+            var list = new List<UserPosts>();
+
+            foreach (var u in allUsers)
+            {
+                list.Add(new UserPosts
+                {
+                    User = u,
+                    Posts = allPosts.Where(p => p.UserId == u.Id).ToList()
+                });
+            }
 
             // 11 - order users by zip code
+            var usersOrderedByZipCode = allUsers.OrderBy(x => x.Address.Zipcode).ToList();
 
 
             // 12 - order users by number of posts
+
+            var users3 = allUsers.Where(x => x.Id % 2 == 0);
+
+            var usersEnum4 = allUsers.Where(x => x.UserIdEstePar());
+
+            var users4 = usersEnum4.ToList();
         }
 
         private static List<Post> ReadPosts(string file)
@@ -98,5 +116,12 @@ namespace Week07.Linq
         {
             return ReadData.ReadFrom<User>(file);
         }
+    }
+
+    public class UserPosts
+    {
+        public User User { get; set; }
+
+        public List<Post> Posts { get; set; }
     }
 }

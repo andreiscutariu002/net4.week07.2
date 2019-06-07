@@ -17,5 +17,10 @@
         public string Website { get; set; }
 
         public Company Company { get; set; }
+
+        public bool UserIdEstePar()
+        {
+            return this.Id % 2 == 0;
+        }
     }
 }
