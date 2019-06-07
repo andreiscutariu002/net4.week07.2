@@ -72,6 +72,7 @@ namespace Week07.Linq
             var usersOrderedByLat = from u in allUsers
                 orderby u.Address.Geo.Lat
                 select u;
+
             var user = usersOrderedByLat.First();
 
             var minLat = allUsers.Min(x => x.Address.Geo.Lat);
@@ -105,6 +106,15 @@ namespace Week07.Linq
             var usersEnum4 = allUsers.Where(x => x.UserIdEstePar());
 
             var users4 = usersEnum4.ToList();
+
+            var first10Posts = allPosts.Take(10).ToList();
+            var second10Posts = allPosts.Skip(10).Take(10).ToList();
+
+            var avg = allUsers.Average(x => x.Id);
+
+            var avg2 = allUsers.Average2(x => x.Id); //
+            
+            var avg3 = allUsers.AverageById();
         }
 
         private static List<Post> ReadPosts(string file)
@@ -123,5 +133,26 @@ namespace Week07.Linq
         public User User { get; set; }
 
         public List<Post> Posts { get; set; }
+    }
+
+    public static class Extensions
+    {
+        public static double Average2(this IEnumerable<User> list, Func<User, int> selector)
+        {
+            return 0;
+        }
+
+
+        public static double AverageById(this IEnumerable<User> list)
+        {
+            var x = 0;
+
+            foreach (var user in list)
+            {
+                x += user.Id;
+            }
+
+            return (double) x / list.Count();
+        }
     }
 }
