@@ -1,0 +1,14 @@
+﻿CREATE TABLE posts(
+   id		INTEGER  NOT NULL PRIMARY KEY 
+  ,userId   INTEGER  NOT NULL
+  ,title	VARCHAR(79) NOT NULL
+  ,body		VARCHAR(225) NOT NULL
+);
+
+
+CREATE TABLE users(
+   id       INTEGER  NOT NULL PRIMARY KEY 
+  ,name     VARCHAR(24) NOT NULL
+  ,username VARCHAR(16) NOT NULL
+  ,email    VARCHAR(25) NOT NULL
+);
